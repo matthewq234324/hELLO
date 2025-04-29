@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geography Location Reveal Quiz</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+    #map-container { position: relative; display: inline-block; }
+    #map { width: 100%; height: auto; }
+    .marker {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: green;
+      border-radius: 50%;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+    }
+    .label {
+      display: none;
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 4px 8px;
+      font-size: 12px;
+      transform: translate(-50%, -120%);
+      white-space: nowrap;
+    }
+    .revealed .label { display: block; }
+  </style>
+</head>
+<body>
+  <h1>Location Reveal Quiz</h1>
+  <p>Click on each green dot to reveal the location name.</p>
+  <div id="map-container" style="width:2000px; height:1001px;">
+    <img id="map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/BlankMap-World-Mercator.png/2000px-BlankMap-World-Mercator.png" alt="World Map" style="position:absolute; top:0; left:0;" />
+    
+    <div class="marker" style="left:1361px; top:306px;" onclick="reveal(this)">
+      <div class="label">Afghanistan</div>
+    </div>
+    <div class="marker" style="left:1017px; top:338px;" onclick="reveal(this)">
+      <div class="label">Algeria</div>
+    </div>
+    <div class="marker" style="left:1167px; top:416px;" onclick="reveal(this)">
+      <div class="label">Anglo-Egyptian Sudan</div>
+    </div>
+    <div class="marker" style="left:1089px; top:196px;" onclick="reveal(this)">
+      <div class="label">Austria-Hungary</div>
+    </div>
+    <div class="marker" style="left:1128px; top:512px;" onclick="reveal(this)">
+      <div class="label">Belgian Congo</div>
+    </div>
+    <div class="marker" style="left:1024px; top:171px;" onclick="reveal(this)">
+      <div class="label">Belgium</div>
+    </div>
+    <div class="marker" style="left:1074px; top:156px;" onclick="reveal(this)">
+      <div class="label">Berlin</div>
+    </div>
+    <div class="marker" style="left:990px; top:157px;" onclick="reveal(this)">
+      <div class="label">Birmingham</div>
+    </div>
+    <div class="marker" style="left:1579px; top:287px;" onclick="reveal(this)">
+      <div class="label">China</div>
+    </div>
+    <div class="marker" style="left:1191px; top:218px;" onclick="reveal(this)">
+      <div class="label">The Crimea</div>
+    </div>
+    <div class="marker" style="left:1171px; top:346px;" onclick="reveal(this)">
+      <div class="label">Egypt</div>
+    </div>
+    <div class="marker" style="left:903px; top:418px;" onclick="reveal(this)">
+      <div class="label">French West Africa</div>
+    </div>
+    <div class="marker" style="left:1058px; top:169px;" onclick="reveal(this)">
+      <div class="label">Germany</div>
+    </div>
+    <div class="marker" style="left:989px; top:143px;" onclick="reveal(this)">
+      <div class="label">Great Britain</div>
+    </div>
+    <div class="marker" style="left:1124px; top:264px;" onclick="reveal(this)">
+      <div class="label">Greece</div>
+    </div>
+    <div class="marker" style="left:1438px; top:381px;" onclick="reveal(this)">
+      <div class="label">India</div>
+    </div>
+    <div class="marker" style="left:1069px; top:239px;" onclick="reveal(this)">
+      <div class="label">Italy</div>
+    </div>
+    <div class="marker" style="left:1096px; top:349px;" onclick="reveal(this)">
+      <div class="label">Libya</div>
+    </div>
+    <div class="marker" style="left:983px; top:148px;" onclick="reveal(this)">
+      <div class="label">Liverpool</div>
+    </div>
+    <div class="marker" style="left:999px; top:166px;" onclick="reveal(this)">
+      <div class="label">London</div>
+    </div>
+    <div class="marker" style="left:1027px; top:214px;" onclick="reveal(this)">
+      <div class="label">Lyons</div>
+    </div>
+    <div class="marker" style="left:988px; top:148px;" onclick="reveal(this)">
+      <div class="label">Manchester</div>
+    </div>
+    <div class="marker" style="left:1064px; top:195px;" onclick="reveal(this)">
+      <div class="label">Munich</div>
+    </div>
+    <div class="marker" style="left:1294px; top:313px;" onclick="reveal(this)">
+      <div class="label">Persia</div>
+    </div>
+    <div class="marker" style="left:1167px; top:605px;" onclick="reveal(this)">
+      <div class="label">Rhodesia</div>
+    </div>
+    <div class="marker" style="left:1069px; top:244px;" onclick="reveal(this)">
+      <div class="label">Rome</div>
+    </div>
+    <div class="marker" style="left:1091px; top:194px;" onclick="reveal(this)">
+      <div class="label">Vienna</div>
+    </div>
+  </div>
+  <script>
+    function reveal(el) {
+      el.classList.toggle('revealed');
+    }
+  </script>
+</body>
+</html>
